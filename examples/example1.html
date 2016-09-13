@@ -1,0 +1,22 @@
+<html>
+	<head>
+	<!-- import jquery-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<!-- import tramontana-->
+		<script src="https://cdn.rawgit.com/pierdr/tramontana/master/lib/bft_min.js"></script>
+	<!-- create a global variable-->
+		<script>
+			var iphone=new BFtObject();
+		</script>
+	</head>
+	<body>
+		<!-- OPEN SOCKET -->
+		<label>IPAddress</label>
+		<input type="text" id="ipInput" placeholder="192.168.1.1">
+		<button onclick="iphone.start($('#ipInput').val())">start</button><br/>
+
+		<!-- CHANGE IPHONE COLOR -->
+		<button onclick="iphone.setColor(Math.random(0,255),Math.random(0,255),Math.random(0,255),255.0)">change color</button>
+	</body>
+
+</html>
