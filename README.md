@@ -65,6 +65,47 @@ To trigger your device you can invoke any of the following methods:
     showImage(url);
 ```
 
+Device as sensor
+------------
+It's possible to access the device sensors like:<br/>
+- orientation;<br/>
+- magnetometer;<br/>
+- accelerometer;<br/>
+- distance sensor;<br/>
+- audio jack;<br/>
+- changes in power source;<br/>
+- touch events;<br/>
+
+The logic with which you can access all the above uses an observer pattern logic. You need to __subscribe__ to sensors and provide a callback function. For example:
+
+```Javascript
+subscribeOrientation(function(ipAddress,orientation){
+	/*...code...*/
+});
+```
+
+The callback function is optional for all the subscribe methods and alternatively you can register to jQuery events:
+
+```Javascript
+$(document).on("orientationChanged",function(ip,e){
+				console.log("triggered",e);
+			})
+```
+
+These are all the methods you can subscribe to:
+
+```Javascript
+	subscribeOrientation(callback);
+	subscribeMagnetometer(callback);
+	
+	/*where frequency determine the frequency in Hz of accelerometer data broadcasting from the device. The lower the frequency the more sporadic the updates. */
+	subscribeAttitude(frequency,callback); 
+	subscrubeDistance(callback);
+	subscribeAudioJack(callback);
+	subscribePowerSource(callback);
+	subscribeTouch(callback);
+```
+
 Playing media remotely
 ------------  
 It's possible to play video, audio and display an image remotely. The supported formats are: 
