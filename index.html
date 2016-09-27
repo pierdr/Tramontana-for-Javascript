@@ -28,61 +28,56 @@
         </ul>
       </header>
       <section>
-        <h3>
-<a id="what-is-tramontana" class="anchor" href="#what-is-tramontana" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What is Tramontana?</h3>
+        <h3 id="toc_0">What is Tramontana?</h3>
 
 <p>Tramonatana is intended as a tool for designers and creatives to use iPhones and iPads as sensors or actuators and create quick interactive prototypes of apps, interactive spaces and objects.</p>
 
-<p>Tramontana is a set of libraries and a iOS and tvOS apps. <a href="https://itunes.apple.com/us/app/tramontana/id1121069555?mt=8">Tramontana app</a> exposes all the features of your phone to a websocket API that can be used from the open source <a href="https://github.com/pierdr/tramontana">javascript</a> or <a href="https://github.com/pierdr/ofxTramontana">openFrameworks</a> library.<br></p>
+<p>Tramontana is a set of libraries and a iOS and tvOS apps. <a href="https://itunes.apple.com/us/app/tramontana/id1121069555?mt=8">Tramontana app</a> exposes all the features of your phone to a websocket API that can be used from the open source <a href="https://github.com/pierdr/tramontana">javascript</a> or <a href="https://github.com/pierdr/ofxTramontana">openFrameworks</a> library.<br/></p>
 
-<p>You can use your device as actuator from a webpage or an openframeworks sketch running on a computer or different device. It is possible to trigger over WiFi:<br>
-• flash light;<br>
-• vibration;<br>
-• changes to screen brightness and color:<br>
-• playback of video, audio or images;<br>
-<br>
-Alternatively you can use the device as a sensor reading the device:<br>
-• orientation;<br>
-• magnetometer;<br>
-• accelerometer;<br>
-• distance sensor;<br>
-• audio jack;<br>
-• changes in power source;<br>
-• touch events;<br></p>
+<p>You can use your device as actuator from a webpage or an openframeworks sketch running on a computer or different device. It is possible to trigger over WiFi:<br/>
+• flash light;<br/>
+• vibration;<br/>
+• changes to screen brightness and color:<br/>
+• playback of video, audio or images;<br/>
+<br/>
+Alternatively you can use the device as a sensor reading the device:<br/>
+• orientation;<br/>
+• magnetometer;<br/>
+• accelerometer;<br/>
+• distance sensor;<br/>
+• audio jack;<br/>
+• changes in power source;<br/>
+• touch events;<br/></p>
 
-<h3>
-<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Getting started</h3>
+<h3 id="toc_1">Getting started</h3>
 
-<p>To get started select your preferred platform, Javascript, openFrameworks or Processing and follow the instructions on the plugin or libraries page.</p>
+<p>To get started download the app and select your preferred platform, Javascript, openFrameworks or Processing and follow the instructions on the plugin or libraries page.</p>
 
-<h5>
-<a id="javascript" class="anchor" href="#javascript" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>javascript</h5>
-
-<p>Please refer to the javascript github page for more informations:
+<p><a href="https://itunes.apple.com/us/app/tramontana/id1121069555?mt=8"><img src="https://darksky.net/app/images/appleAppStoreBadgeBig.png" alt="" width="200px"/></a>
+<br/><br/><br/>
+<img src="http://www.pierdr.com/img/js-logo.jpg" width="50px"><b style="padding-left:10px">javascript</b><br/>
+Please refer to the javascript github page for more informations:
 <a href="https://github.com/pierdr/tramontana">javascript</a></p>
 
-<pre><code>            var iphone=new BFtObject();
-            iphone.start('192.168.1.2');
-            iphone.makeVibrate();
-</code></pre>
+<div><pre><code class="language-none">            var iphone=new BFtObject();
+            iphone.start(&#39;192.168.1.2&#39;);
+            iphone.makeVibrate();</code></pre></div>
 
-<h5>
-<a id="openframeworks" class="anchor" href="#openframeworks" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>openFrameworks</h5>
+<p><br/><br/><br/>
+<img width="50px" src="http://www.pierdr.com/img/of-logo.svg"/> <b style="padding-left:10px">openFrameworks</b> <br/>
+The openFrameworks plugin contains examples that show how you can use your phone as sensor or actuator. More info on the plugin page: <a href="https://github.com/pierdr/ofxTramontana">openFrameworks</a></p>
 
-<p>The openFrameworks plugin contains examples that show how you can use your phone as sensor or actuator. More info on the plugin page: <a href="https://github.com/pierdr/ofxTramontana">openFrameworks</a></p>
-
-<pre><code>#include "ofxTramontana.h"
+<div><pre><code class="language-none">#include &quot;ofxTramontana.h&quot;
 ....
 ofxTramontanaIOS iphone;
 ....
-iphone.start("192.168.1.2");
-iphone.makeVibrate();
-</code></pre>
+iphone.start(&quot;192.168.1.2&quot;);
+iphone.makeVibrate();</code></pre></div>
 
-<h5>
-<a id="processing" class="anchor" href="#processing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Processing</h5>
+<p><br/><br/><br/>
+<img width="50px" src="http://www.pierdr.com/img/processing-logo.jpg"/><img width="50px" src="http://www.pierdr.com/img/unity-logo.jpg"/> <b style="padding-left:10px">Processing and Unity</b> <br/>
+The Processing and Unity libraries are currently under development.</p>
 
-<p>The processing library is currently under development.</p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/pierdr">pierdr</a></p>
