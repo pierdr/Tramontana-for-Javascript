@@ -48,7 +48,7 @@
 			<button onclick="iphone.subscribeOrientation(function(ip,e){
 					$('#orientationContent').html(orientations[e-0]);
 				});">subscribe orientation</button>
-
+			<button onclick="iphone.releaseOrientation()">unsubscribe orientation</button>
 			<!-- ADD CONTENT -->
 			<div style="padding:10px">Orientation:<span id="orientationContent">unknown</span></div>
 		</div>
@@ -69,7 +69,7 @@
 						$('#distanceContent').css('background-color','#000');
 					}
 				});">subscribe distance</button>
-
+			<button onclick="iphone.releaseDistance()">unsubscribe distance</button>
 			<!-- ADD CONTENT -->
 			<div style="padding:10px;border:1px solid black; max-width:10px;max-height: 10px" id="distanceContent"></div>
 		</div>
@@ -80,10 +80,12 @@
 			<p><b>Audio Jack</b></p>
 			
 			<button onclick="iphone.subscribeAudioJack(function(ip,e){
-					console.log(e);
+					
+					
+					$('#audioJackContent').html((e-0==1)?'in':'out');
 
 				});">subscribe audio jack</button>
-
+			<button onclick="iphone.releaseAudioJack()">unsubscribe audio jack</button>
 			<!-- ADD CONTENT -->
 			<div style="padding:10px">Audio Jack:<span id="audioJackContent">unknown</span></div>
 		</div>
@@ -94,12 +96,17 @@
 			<p><b>Attitude</b></p>
 			<input type="number" id="attitudeFrequency" value="1">
 			<button onclick="iphone.subscribeAttitude($('#attitudeFrequency').val()-0,function(ip,e){
-					console.log(e);
-
+					
+					$('#attitudeContentY').html(e['y']);
+					$('#attitudeContentP').html(e['p']);
+					$('#attitudeContentR').html(e['r']);
 				});">subscribe attitude</button>
-
+			<button onclick="iphone.releaseAttitude()">unsubscribe attitude</button>
 			<!-- ADD CONTENT -->
-			<div style="padding:10px">Audio Jack:<span id="attitudeContent">unknown</span></div>
+			<div style="padding:10px">Attitude<br/>
+			yaw:<span id="attitudeContentY">unknown</span><br/>
+			pitch:<span id="attitudeContentP">unknown</span><br/>
+			roll:<span id="attitudeContentR">unknown</span></div>
 		</div>
 		<!------------------------------
 			POWER SOURCE
@@ -107,13 +114,28 @@
 		<div class="sensor">
 			<p><b>Power Source</b></p>
 			
-			<button onclick="iphone.subscribePowerSource($('#powerSourceContent').val()-0,function(ip,e){
-					console.log(e);
+			<button onclick="iphone.subscribePowerSource(function(ip,e){
+					$('#powerSourceContent').html(e);
 
 				});">subscribe power source</button>
-
+			<button onclick="iphone.releasePowerSource();">unsubscribe power source</button>
 			<!-- ADD CONTENT -->
 			<div style="padding:10px">Power Source:<span id="powerSourceContent">unknown</span></div>
+
+			</div>
+		<!------------------------------
+			MAGNETOMETER
+		-------------------------------->
+		<div class="sensor">
+			<p><b>Magnetometer</b></p>
+			<p style="font-size:12px"> Note: it works if you bring a magnet close to your device.</p>
+			<button onclick="iphone.subscribeMagnetometer(function(ip,e,b){
+					$('#magnetometerContent').html(b);
+
+				});">subscribe Magnetometer</button>
+			<button onclick="iphone.releaseMagnetometer()">unsubscribe magnetometer</button>
+			<!-- ADD CONTENT -->
+			<div style="padding:10px">Power Source:<span id="magnetometerContent">unknown</span></div>
 
 			</div>
 	</body>
