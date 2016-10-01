@@ -1,0 +1,31 @@
+<html>
+	<head>
+	<!-- import jquery-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<!-- import tramontana -->
+		<script src="https://rawgit.com/pierdr/tramontana/master/lib/bft_min.js"></script>
+		
+	<!-- create a global variable-->
+		<script>
+			var iphone=new BFtObject();
+			var orientations=["","Portrait","PortraitUpsideDown","LandscapeLeft","LandscapeRight","FacingUp","FacingDown"];
+			
+		</script>
+	</head>
+	<body>
+		<!-- OPEN SOCKET -->
+		<label>IPAddress</label>
+		<input type="text" id="ipInput" placeholder="192.168.1.1">
+		<!-- Note: check that your phone is not orientation locked.-->
+		<button onclick="iphone.start($('#ipInput').val(),function(e){
+			iphone.subscribeOrientation(function(ip,e){
+				$('#content').html(orientations[e-0]);
+			});
+			})">start and subscribe for orientation changes</button><br/>
+
+		<!-- ADD CONTENT -->
+		<div style="padding:10px">Orientation:<span id="content">unknown</span></div>
+		
+	</body>
+
+</html>
