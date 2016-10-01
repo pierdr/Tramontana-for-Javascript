@@ -88,19 +88,34 @@
 			<div style="padding:10px">Audio Jack:<span id="audioJackContent">unknown</span></div>
 		</div>
 		<!------------------------------
-			
+			ATTITUDE
 		-------------------------------->
 		<div class="sensor">
 			<p><b>Attitude</b></p>
-			
-			<button onclick="iphone.subscribeAttitude(function(ip,e){
+			<input type="number" id="attitudeFrequency" value="1">
+			<button onclick="iphone.subscribeAttitude($('#attitudeFrequency').val()-0,function(ip,e){
 					console.log(e);
 
-				});">subscribe audio jack</button>
+				});">subscribe attitude</button>
 
 			<!-- ADD CONTENT -->
-			<div style="padding:10px">Audio Jack:<span id="audioJackContent">unknown</span></div>
+			<div style="padding:10px">Audio Jack:<span id="attitudeContent">unknown</span></div>
 		</div>
+		<!------------------------------
+			POWER SOURCE
+		-------------------------------->
+		<div class="sensor">
+			<p><b>Power Source</b></p>
+			
+			<button onclick="iphone.subscribePowerSource($('#powerSourceContent').val()-0,function(ip,e){
+					console.log(e);
+
+				});">subscribe power source</button>
+
+			<!-- ADD CONTENT -->
+			<div style="padding:10px">Power Source:<span id="powerSourceContent">unknown</span></div>
+
+			</div>
 	</body>
 
 </html>
