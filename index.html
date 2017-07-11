@@ -19,31 +19,48 @@
     <div class="wrapper">
       <header>
         <h1>Tramontana</h1>
-        <p>A prototyping kit for iOS and tvOS</p>
+        <p>Interactive kit for simple and rich multidevice experiences.</p>
 
-        <p class="view"><a href="https://github.com/pierdr/tramontana">View the Project on GitHub <small>pierdr/tramontana</small></a></p>
+      <!--   <p class="view"><a href="https://github.com/pierdr/tramontana">View the Project on GitHub <small>pierdr/tramontana</small></a></p>
+ -->
 
-
-        <ul>
+       <!--  <ul>
           <li><a href="https://github.com/pierdr/tramontana/zipball/master">Download <strong>ZIP File</strong></a></li>
           <li><a href="https://github.com/pierdr/tramontana/tarball/master">Download <strong>TAR Ball</strong></a></li>
           <li><a href="https://github.com/pierdr/tramontana">View On <strong>GitHub</strong></a></li>
-        </ul>
+        </ul> -->
       </header>
       <section>
         <h3 id="toc_0">What is Tramontana?</h3>
 
-<p>Tramonatana is intended as a tool for designers and creatives to use iPhones and iPads as sensors or actuators and create quick interactive prototypes of apps, interactive spaces and objects.</p>
+<p>Tramonatana is a tool for artists and designers to create interactive spaces and prototypes.</p>
 
-<p>Tramontana is a set of libraries and a iOS and tvOS apps. <a href="https://itunes.apple.com/us/app/tramontana/id1121069555?mt=8">Tramontana app</a> exposes all the features of your phone to a websocket API that can be used from the open source <a href="https://github.com/pierdr/tramontana">javascript</a> or <a href="https://github.com/pierdr/ofxTramontana">openFrameworks</a> library.<br/></p>
+<p>From one sketch you will be able to easily pilot a multitude of devices running iOS, tvOS or macOS.</p>
+<p>
+Choose a sketching environment between:<br/>
+· <a href="https://github.com/pierdr/Tramontana-for-Processing" target="_blank">Processsing</a>;<br/>
 
-<p>You can use your device as actuator from a webpage or an openframeworks sketch running on a computer or different device. It is possible to trigger over WiFi:<br/>
-• flash light;<br/>
-• vibration;<br/>
-• changes to screen brightness and color:<br/>
+· <a href="https://github.com/pierdr/ofxTramontana" target="_blank">OpenFrameworks</a>;<br/>
+
+· <a href="https://github.com/pierdr/tramontana" target="_blank">Javascript (web)</a>;
+</p>
+<p>
+From the sketching environment you will be able to control one or more devices running iOS, tvOS or macOS as well as receiving input data from touchscreens, accelerometers, proximity sensors etc.. 
+</p>
+<p>
+You can download for free the node apps for:<br/>
+·<a href="https://itunes.apple.com/us/app/tramontana/id1121069555?ls=1&mt=8" target="_blank"> iOS</a>;<br/>
+· <a href="https://itunes.apple.com/us/app/tramontana/id1257425018?ls=1&mt=12" target="_blank">macOS</a>;<br/>
+· search Tramontana on your appleTv to find tramontana for tvOS.
+</p>
+
+<p>From your sketching environment you can control:<br/>
+• flash light (iOS only);<br/>
+• vibration (iOS only);<br/>
+• changes to screen brightness and color;<br/>
 • playback of video, audio or images;<br/>
 <br/>
-Alternatively you can use the device as a sensor reading the device:<br/>
+Alternatively you can use the device (iOS only) as a sensor reading the device:<br/>
 • orientation;<br/>
 • magnetometer;<br/>
 • accelerometer;<br/>
@@ -54,49 +71,52 @@ Alternatively you can use the device as a sensor reading the device:<br/>
 
 <h3 id="toc_1">Getting started</h3>
 
+
 <p>To get started download the app and select your preferred platform, Javascript, openFrameworks or Processing and follow the instructions on the plugin or libraries page.</p>
 
-<p><a href="https://itunes.apple.com/us/app/tramontana/id1121069555?mt=8"><img src="https://darksky.net/app/images/appleAppStoreBadgeBig.png" alt="" width="200px"/></a>
-<br/><br/><br/>
-<img src="http://www.pierdr.com/img/js-logo.jpg" width="50px"><b style="padding-left:10px">javascript</b><br/>
-Please refer to the javascript github page for more informations:
-<a href="https://github.com/pierdr/tramontana">javascript</a></p>
 
-<div><pre><code class="language-none">            var iphone=new BFtObject();
-            iphone.start(&#39;192.168.1.2&#39;);
-            iphone.makeVibrate();</code></pre></div>
+<img src="http://files.cargocollective.com/757295/js.jpg" width="50px"><b style="padding-left:10px">Javascript</b><br/>
 
-            <b>Try the javascript live examples:</b>
-            <br/>
-            <a href="http://www.pierdr.com/tramontana/examples/example-basic.html">Basic example</a>
-            <br/>
-            <a href="http://www.pierdr.com/tramontana/examples/example-all-sensors.html">Sensors example</a><br/>
-            tested on macOS X 10.11.4 with Safari and Chrome.<br/>
-            Code on <a href="https://github.com/pierdr/tramontana/tree/master/examples">github</a>
+Javascript library <a href="https://github.com/pierdr/tramontana">download link.</a></p>
+
+<div><pre><code class="language-none">            var t=new BFtObject();
+            t.start(&#39;192.168.1.2&#39;);
+            t.setColor(0.0,1.0,1.0,1.0);</code></pre></div>
+
+            Javascript examples on <a href="https://github.com/pierdr/tramontana/tree/master/examples">github</a>, tested with macOS X 10.11.4 with Safari and Chrome.<br/>
 
 <p><br/><br/><br/>
-<img width="50px" src="http://www.pierdr.com/img/of-logo.svg"/> <b style="padding-left:10px">openFrameworks</b> <br/>
-The openFrameworks plugin contains examples that show how you can use your phone as sensor or actuator. More info on the plugin page: <a href="https://github.com/pierdr/ofxTramontana">openFrameworks</a></p>
+<img width="50px" src="http://files.cargocollective.com/757295/of-logo.png"/> <b style="padding-left:10px">openFrameworks</b> <br/>
+
+openFrameworks library <a href="https://github.com/pierdr/ofxTramontana">download link.</a></p>
 
 <div><pre><code class="language-none">#include &quot;ofxTramontana.h&quot;
 ....
-ofxTramontanaIOS iphone;
+ofxTramontanaIOS t;
 ....
-iphone.start(&quot;192.168.1.2&quot;);
-iphone.makeVibrate();</code></pre></div>
+t.start(&quot;192.168.1.2&quot;);
+t.setColor(0.0,1.0,1.0,1.0);</code></pre></div>
 
-            <b>Try the openFrameworks examples:</b>
-            <br/>
-            <a href="http://www.pierdr.com/tramontana/tramontana-demo1.zip">Demo 1</a>
-            <br/>
-            <a href="http://www.pierdr.com/tramontana/tramontana-demo2.zip">Demo 2</a><br/>
-            tested on macOS X 10.11.4.<br/>
-            Code on <a href="https://github.com/pierdr/tramontana-demos">github</a>.
+            
+            openFrameworks examples on <a href="https://github.com/pierdr/tramontana-demos">github</a>, tested on macOS X 10.11.4.<br/>
+            
 
 
 <p><br/><br/><br/>
-<img width="50px" src="http://www.pierdr.com/img/processing-logo.jpg"/><img width="50px" src="http://www.pierdr.com/img/unity-logo.jpg"/> <b style="padding-left:10px">Processing and Unity</b> <br/>
-The Processing and Unity libraries are currently under development.</p>
+<img width="50px" src="http://files.cargocollective.com/757295/processing3-logo.png"/> <b style="padding-left:10px">Processing</b> <br/>
+</p>
+Processing library <a href="https://github.com/pierdr/Tramontana-for-Processing">download link.</a></p>
+<div><pre><code class="language-none">
+import tramontana.library.*;
+import websockets.*;
+
+Tramontana t;
+
+void setup(){
+  t = new Tramontana(this,"192.168.1.16");
+  t.setColor(0.0,1.0,1.0,1.0);
+}
+</code></pre></div>
 
       </section>
       <footer>
