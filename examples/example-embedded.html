@@ -1,0 +1,34 @@
+<html>
+	<head>
+	<!-- import css-->
+	<link rel="stylesheet" type="text/css" href="./stylesheet.css">
+	<!-- import jquery-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<!-- import tramontana-->
+		<script src="../lib/tramontana_min.js"></script>
+	<!-- create a global variable-->
+		<script>
+			var embedded = new tramontana();
+		</script>
+		
+	</head>
+	<body>
+	
+		<!--Link to tramontana the app!-->
+		<div>
+
+		<h5>To get started download the Tramontana App on your iOS device from <a href="https://itunes.apple.com/us/app/tramontana/id1121069555?mt=8">here</a>.</h5>
+		
+		</div>
+		<!-- OPEN SOCKET -->
+		<label>IPAddress:</label>
+		<input type="text" id="ipInput" placeholder="192.168.1.1"><br/>
+		<button onclick="embedded.start($('#ipInput').val())">start</button>
+	
+		<!-- CHANGE IPHONE COLOR -->
+		<button onclick="console.log(0,parseInt(Math.random()*255),parseInt(Math.random()*255),parseInt(Math.random()*255)
+		);embedded.setColorEmbedded(0,parseInt(Math.random()*255),parseInt(Math.random()*255),parseInt(Math.random()*255)
+		)">change color embedded</button>
+	</body>
+
+</html>
