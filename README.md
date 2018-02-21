@@ -24,10 +24,10 @@ HTML
 	<!-- import jquery-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<!-- import tramontana-->
-		<script src="https://rawgit.com/pierdr/tramontana/master/lib/bft_min.js"></script>
-	<!-- create a BFtObject -->
+		<script src="https://rawgit.com/pierdr/tramontana/master/lib/tramontana_min.js"></script>
+	<!-- create a tramontana instance -->
 		<script>
-			var iphone=new BFtObject();
+			var iphone=new tramontana();
 		</script>
 	</head>
 	<body>
