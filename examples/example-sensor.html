@@ -1,22 +1,23 @@
 <html>
 	<head>
+	<!-- import css-->
+	<link rel="stylesheet" type="text/css" href="./stylesheet.css">
 	<!-- import jquery-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<!-- import tramontana -->
-		<script src="https://rawgit.com/pierdr/tramontana/master/lib/bft_min.js"></script>
+		<script src="../lib/tramontana_min.js"></script>
 		
 	<!-- create a global variable-->
 		<script>
-			var iphone=new BFtObject();
+			var iphone=new tramontana();
 			var orientations=["","Portrait","PortraitUpsideDown","LandscapeLeft","LandscapeRight","FacingUp","FacingDown"];
 			
 		</script>
 	</head>
 	<body>
 		<!--Link to tramontana the app!-->
-		<div style="padding-bottom: 150px;">
-		<h5>To get started download the Tramontana App on your iOS device:</h5>
-		<a href="https://itunes.apple.com/us/app/tramontana/id1121069555?mt=8"><img src="https://darksky.net/app/images/appleAppStoreBadgeBig.png" alt="" width="150px"></a>
+		<div>
+		<h5>To get started download the Tramontana App on your iOS device from <a href="https://itunes.apple.com/us/app/tramontana/id1121069555?mt=8">here</a>.</h5>
 		</div>
 		<!-- OPEN SOCKET -->
 		<label>IPAddress</label>

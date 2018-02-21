@@ -1,0 +1,27 @@
+
+		@font-face {
+			font-family: 'reg';
+			src:url('http://files.cargocollective.com/757295/81780024-f1ae-4135-a0ae-d0bab2c19986.ttf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+		body, html {
+		    
+		    font-family: reg, sans-serif;
+		    background-color: black;
+		    color: #efefef;
+		}
+		input{
+			background-color: black;
+			color: #efefef;
+		}
+		button{
+			margin: 10px;
+		}
+		a{
+			color: #efefef;
+		}
+		input {
+		    outline: none;
+		    border: none;
+		}

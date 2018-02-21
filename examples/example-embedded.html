@@ -8,7 +8,7 @@
 		<script src="../lib/tramontana_min.js"></script>
 	<!-- create a global variable-->
 		<script>
-			var iphone = new tramontana();
+			var embedded = new tramontana();
 		</script>
 		
 	</head>
@@ -23,11 +23,12 @@
 		<!-- OPEN SOCKET -->
 		<label>IPAddress:</label>
 		<input type="text" id="ipInput" placeholder="192.168.1.1"><br/>
-		<button onclick="iphone.start($('#ipInput').val())">start</button>
-
+		<button onclick="embedded.start($('#ipInput').val())">start</button>
+	
 		<!-- CHANGE IPHONE COLOR -->
-		<button onclick="iphone.setColor(Math.random(0,255),Math.random(0,255),Math.random(0,255),255.0
-		)">change color</button>
+		<button onclick="console.log(0,parseInt(Math.random()*255),parseInt(Math.random()*255),parseInt(Math.random()*255)
+		);embedded.setColorEmbedded(0,parseInt(Math.random()*255),parseInt(Math.random()*255),parseInt(Math.random()*255)
+		)">change color embedded</button>
 	</body>
 
 </html>
