@@ -1,134 +1,130 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Tramontana by pierdr</title>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Tramontana for Web</title>
+<meta name="description" content="Tramontana Library for Javascript" />
+<meta name="keywords" content="javacript, web, library, tramontana, interactive spaces" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="ROBOTS" content="index,follow,archive" />
+<meta http-equiv="imagetoolbar" content="false" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="author" content="Pierluigi Dalla Rosa" />
+<meta name="Rating" content="General" />
+<meta name="revisit-after" content="7 Days" />
+<meta name="doc-class" content="Living Document" />
+<link rel="stylesheet" type="text/css" href="./stylesheet.css">
+</head>
+<body>
+  <div id="container">
   
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width">
-    
-    <!--[if lt IE 9]>
-<meta http-equiv="refresh" content="0; url=http://www.pierdr.com/tramontana" />
-<script type="text/javascript">window.location.assign("http://www.pierdr.com/tramontana")</script>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Tramontana</h1>
-        <p>Interactive kit for simple and rich multidevice experiences.</p>
-
-      <!--   <p class="view"><a href="https://github.com/pierdr/tramontana">View the Project on GitHub <small>pierdr/tramontana</small></a></p>
- -->
-
-       <!--  <ul>
-          <li><a href="https://github.com/pierdr/tramontana/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/pierdr/tramontana/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/pierdr/tramontana">View On <strong>GitHub</strong></a></li>
-        </ul> -->
-      </header>
-      <section>
-        <h3 id="toc_0">What is Tramontana?</h3>
-
-<p>Tramonatana is a tool for artists and designers to create interactive spaces and prototypes.</p>
-
-<p>From one sketch you will be able to easily pilot a multitude of devices running iOS, tvOS or macOS.</p>
-<p>
-Choose a sketching environment between:<br/>
-· <a href="https://github.com/pierdr/Tramontana-for-Processing" target="_blank">Processsing</a>;<br/>
-
-· <a href="https://github.com/pierdr/ofxTramontana" target="_blank">OpenFrameworks</a>;<br/>
-
-· <a href="https://github.com/pierdr/tramontana" target="_blank">Javascript (web)</a>;
-</p>
-<p>
-From the sketching environment you will be able to control one or more devices running iOS, tvOS or macOS as well as receiving input data from touchscreens, accelerometers, proximity sensors etc.. 
-</p>
-<iframe src="https://player.vimeo.com/video/224816521?byline=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-<p>
-<div><img src="http://payload534.cargocollective.com/1/23/757295/12999165/5985471942738575980_11037276583658598037.gif" width="320" height="320" width_o="320" height_o="320" src_o="http://payload534.cargocollective.com/1/23/757295/12999165/5985471942738575980_11037276583658598037.gif" data-mid="69611279"  border="0" align="left" data-title="1200 (320) — 320 × 320" style="float: none; margin-left: 114.5px; width: 320px; height: 320px; cursor: -webkit-zoom-in;"><br/></div>
-<p><br>
-You can download for free the node apps for:<br/>
-·<a href="https://itunes.apple.com/us/app/tramontana/id1121069555?ls=1&mt=8" target="_blank"> iOS</a>;<br/>
-· <a href="https://itunes.apple.com/us/app/tramontana/id1257425018?ls=1&mt=12" target="_blank">macOS</a>;<br/>
-· search Tramontana on your appleTv to find tramontana for tvOS.
-</p>
-
-<p>From your sketching environment you can control:<br/>
-• flash light (iOS only);<br/>
-• vibration (iOS only);<br/>
-• changes to screen brightness and color;<br/>
-• playback of video, audio or images;<br/>
-<br/>
-Alternatively you can use the device (iOS only) as a sensor reading the device:<br/>
-• orientation;<br/>
-• magnetometer;<br/>
-• accelerometer;<br/>
-• distance sensor;<br/>
-• audio jack;<br/>
-• changes in power source;<br/>
-• touch events;<br/></p>
-
-<h3 id="toc_1">Getting started</h3>
-
-
-<p>To get started download the app and select your preferred platform, Javascript, openFrameworks or Processing and follow the instructions on the plugin or libraries page.</p>
-
-
-<img src="http://files.cargocollective.com/757295/js.jpg" width="50px"><b style="padding-left:10px">Javascript</b><br/>
-
-Javascript library <a href="https://github.com/pierdr/tramontana">download link.</a></p>
-
-<div><pre><code class="language-none">            var t=new BFtObject();
-            t.start(&#39;192.168.1.2&#39;);
-            t.setColor(0.0,1.0,1.0,1.0);</code></pre></div>
-
-            Javascript examples on <a href="https://github.com/pierdr/tramontana/tree/master/examples">github</a>, tested with macOS X 10.11.4 with Safari and Chrome.<br/>
-
-<p><br/><br/><br/>
-<img width="50px" src="http://files.cargocollective.com/757295/of-logo.png"/> <b style="padding-left:10px">openFrameworks</b> <br/>
-
-openFrameworks library <a href="https://github.com/pierdr/ofxTramontana">download link.</a></p>
-
-<div><pre><code class="language-none">#include &quot;ofxTramontana.h&quot;
-....
-ofxTramontanaIOS t;
-....
-t.start(&quot;192.168.1.2&quot;);
-t.setColor(0.0,1.0,1.0,1.0);</code></pre></div>
-
-            
-            openFrameworks examples on <a href="https://github.com/pierdr/tramontana-demos">github</a>, tested on macOS X 10.11.4.<br/>
-            
-
-
-<p><br/><br/><br/>
-<img width="50px" src="http://files.cargocollective.com/757295/processing3-logo.png"/> <b style="padding-left:10px">Processing</b> <br/>
-</p>
-Processing library <a href="https://github.com/pierdr/Tramontana-for-Processing">download link.</a></p>
-<div><pre><code class="language-none">
-import tramontana.library.*;
-import websockets.*;
-
-Tramontana t;
-
-void setup(){
-  t = new Tramontana(this,"192.168.1.16");
-  t.setColor(0.0,1.0,1.0,1.0);
-}
-</code></pre></div>
-
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/pierdr">pierdr</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+    <div id="header">
+      <h1><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple62/v4/8b/0c/39/8b0c3956-a96d-7d82-d47a-1a898e6a4f9c/source/60x60bb.jpg" alt="" style="width:30px"/>   Tramontana for Web</h1>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
     
-  </body>
+    <div id="menu" class="clear">
+      <ul>
+        <li><a href="#about">About</a> \ </li>
+        <li><a href="#download">Download</a> \ </li>
+        <li><a href="#examples">Examples</a> \ </li>
+        <!--<li><a href="./reference/index.html" target="_blank">Reference</a></li>-->
+        <!-- <li><a href="#demos">Demos</a> \ </li> -->       
+        <!-- <li><a href="#misc">Misc</a> \ </li> -->
+        <!-- <li><a href="#images">Images</a> \ </li> -->
+      </ul>
+    </div>
+    <div id="videos" class="clear">
+        
+          <img src="http://payload534.cargocollective.com/1/23/757295/12999165/5985471942738575979_11808315808272880990.gif" alt="" style="width:200px">
+        <img src="http://payload534.cargocollective.com/1/23/757295/12999165/5985471942738575980_11037276583658598037.gif" alt="" style="width:200px">
+        <img src="http://payload534.cargocollective.com/1/23/757295/12999165/5985471942738575981_8641813205919182156.gif" alt="" style="width:200px">
+        <img src="http://payload534.cargocollective.com/1/23/757295/12999165/vid1_.gif" alt="" style="width:200px">
+        <br>
+        <br>
+      </div>
+    <div id="content" class="clear">
+      
+      <div id="about">
+      <br>
+      <p>
+      A Library by <a href="http://www.pierdr.com">Pierluigi Dalla Rosa</a> for the Web.<br>
+      Last update, 20th February 2018.
+      </p>
+      <p>
+      Tramontana is a platform for interactive spaces. 
+<br><br>
+With Tramontana will be simple to architect choreographies and interactive spaces. Connected multiple devices to create mesmerizing immersive experiences just from few lines of code.
+<br>
+<div style="text-align: center">
+  
+</div>
+<br>
+
+Tramontana is available for iOS, tvOS. macOS and tramontana boards coming soon. <br/>
+      You can download Tramontana <br>
+      <b>- for iOS <a href="https://itunes.apple.com/US/app/id1121069555?mt=8 ">here</a>.<br>
+      </b>
+      <b>- for macOS <a href="https://itunes.apple.com/us/app/tramontana/id1257425018?ls=1&mt=12">here</a>.</b>
+      </p>
+      </div>
+      
+      
+      
+      <div id="download" class="clear">
+      <h2>Download</h2>
+      <p>
+      Download Tramontana version 1.5 in 
+      <a href="lib/tramontana_min.js">.zip format</a>.
+      </p>
+      </div>  
+      
+      
+      <div id="resources">
+      <p><strong>Keywords</strong>. interactive spaces - complex system - state machines - prototyping - choreography</p>
+      <p><strong>Reference</strong>. Have a look at the javadoc reference <a href="./reference/index.html" target="_blank">here</a>. A copy of the reference is included in the .zip as well.</p>   
+      <p><strong>Source</strong>. The source code of Tramontana is available on <a href="https://github.com/pierdr/Tramontana-for-Web/">github</a>.</p>      
+      </div>
+      <br>
+      
+      <div id="examples" class="clear">
+      <h2>Examples</h2>
+      <p>Find a list of examples in the current distribution of Tramontana for Processing, or have a look at them by following the links below.</p>
+      <ul>
+      <li><a href="examples/example-basic.html">Hello World!</a></li>
+
+      <li><a href="examples/example-sensor.html">Tramontana as sensor.</a></li> 
+      <li><a href="examples/example-all-sensors.html">Tramontana as a set of sensors.</a></li> 
+      <li><a href="examples/example-processing.html">Tramontana x Processingjs</a></li> 
+      <li><a href="examples/example-processing2.html">Tramontana x Processingjs 2</a></li>
+
+      </ul>
+      </div>
+      <br>
+      
+
+      
+      <div id="info">
+      <h2>Tested</h2>
+      <p>
+      <!-- on which platform has the Library been tested? -->
+      <strong>Platform</strong> Safari 10.1.2, Chrome 64.0.3282.167
+
+      
+      <!-- does your Library depend on any other Library or framework? -->
+      <br /><strong>Dependencies</strong> <a href="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js">jQuery</a>
+      </p>
+      </div>
+    
+     
+      
+      
+      <br class="clear" />
+    </div>
+    
+    <div id="footer">
+      <p>by Pierluigi Dalla Rosa, pierdr 2018.</p>
+    </div>
+  </div>
+</body>
 </html>
