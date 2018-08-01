@@ -17,15 +17,22 @@
 		<!--Link to tramontana the app!-->
 		<div>
 
-		<h5>To get started download the Tramontana App on your iOS device from <a href="https://itunes.apple.com/us/app/tramontana/id1121069555?mt=8">here</a>.</h5>
-		
+		<h4>To get started download the Tramontana App on your iOS device from <a href="https://itunes.apple.com/us/app/tramontana/id1121069555?mt=8">here</a>.</h4>
+		<div>
+			</br> 
+			Insert the IP address of your tramontana board and press start to begin. 
+			</br> </br> 
+			Press change color to change color of the onboard LED.
+		</br> </br> </br> 
+
+		</div>
 		</div>
 		<!-- OPEN SOCKET -->
 		<label>IPAddress:</label>
 		<input type="text" id="ipInput" placeholder="192.168.1.1"><br/>
 		<button onclick="embedded.start($('#ipInput').val())">start</button>
 	
-		<!-- CHANGE IPHONE COLOR -->
+		<!-- CHANGE device COLOR -->
 		<button onclick="console.log(0,parseInt(Math.random()*255),parseInt(Math.random()*255),parseInt(Math.random()*255)
 		);embedded.setColorEmbedded(0,parseInt(Math.random()*255),parseInt(Math.random()*255),parseInt(Math.random()*255)
 		)">change color embedded</button>

@@ -5,11 +5,11 @@
 	<!-- import jquery-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<!-- import tramontana -->
-		<script src="https://rawgit.com/pierdr/tramontana/master/lib/bft_min.js"></script>
+		<script src="../lib/tramontana_min.js"></script>
 		
 	<!-- create a global variable-->
 		<script>
-			var iphone=new BFtObject();
+			var device=new tramontana();
 			var orientations=["","Portrait","PortraitUpsideDown","LandscapeLeft","LandscapeRight","FacingUp","FacingDown"];
 			$(function(){
 				$("button").attr('disabled','disabled');
@@ -31,25 +31,34 @@
 	<body>
 		<!--Link to tramontana the app!-->
 		<div >
-		<h5>To get started download the Tramontana App on your iOS device from <a href="https://itunes.apple.com/us/app/tramontana/id1121069555?mt=8">here</a>.</h5>
+		<h4>To get started download the tramontana App on your iOS device from <a href="https://itunes.apple.com/us/app/tramontana/id1121069555?mt=8">here</a>.</h4>
 		</div>
-		<!-- OPEN SOCKET -->
-		<label>IPAddress</label>
+		<p>
+			1. Insert the IP Address and press start.<br/><br/>
+			<label>IPAddress</label>
+
 		<input type="text" id="ipInput" placeholder="192.168.1.1">
-		<button id="startButton" onclick="iphone.start($('#ipInput').val(),function(e){
+		<button id="startButton" onclick="device.start($('#ipInput').val(),function(e){
 				$('button').removeAttr('disabled');
 
 			})">start</button><br/>
+		</p>
+		<p style="max-width: 480px">
+			2. After you have initialized tramontana you can subscribe or unsubscribe to the following sensors: 
+		</p>
+		
+		<!-- OPEN SOCKET -->
+		
 		<!------------------------------
 			ORIENTATION
 		-------------------------------->
 		<div class="sensor">
 			<p><b>Orientation</b></p>
 			<p style="font-size:12px"> Note: check that your phone is not orientation locked.</p>
-			<button onclick="iphone.subscribeOrientation(function(ip,e){
+			<button onclick="device.subscribeOrientation(function(ip,e){
 					$('#orientationContent').html(orientations[e-0]);
 				});">subscribe orientation</button>
-			<button onclick="iphone.releaseOrientation()">unsubscribe orientation</button>
+			<button onclick="device.releaseOrientation()">unsubscribe orientation</button>
 			<!-- ADD CONTENT -->
 			<div style="padding:10px">Orientation:<span id="orientationContent">unknown</span></div>
 		</div>
@@ -60,7 +69,7 @@
 		<div class="sensor">
 			<p><b>Distance</b></p>
 			
-			<button onclick="iphone.subscribeDistance(function(ip,e){
+			<button onclick="device.subscribeDistance(function(ip,e){
 					if(e-0==0)
 					{
 						$('#distanceContent').css('background-color','#fff');
@@ -70,7 +79,7 @@
 						$('#distanceContent').css('background-color','#000');
 					}
 				});">subscribe distance</button>
-			<button onclick="iphone.releaseDistance()">unsubscribe distance</button>
+			<button onclick="device.releaseDistance()">unsubscribe distance</button>
 			<!-- ADD CONTENT -->
 			<div style="padding:10px;border:1px solid black; max-width:10px;max-height: 10px" id="distanceContent"></div>
 		</div>
@@ -80,13 +89,13 @@
 		<div class="sensor">
 			<p><b>Audio Jack</b></p>
 			
-			<button onclick="iphone.subscribeAudioJack(function(ip,e){
+			<button onclick="device.subscribeAudioJack(function(ip,e){
 					
 					
 					$('#audioJackContent').html((e-0==1)?'in':'out');
 
 				});">subscribe audio jack</button>
-			<button onclick="iphone.releaseAudioJack()">unsubscribe audio jack</button>
+			<button onclick="device.releaseAudioJack()">unsubscribe audio jack</button>
 			<!-- ADD CONTENT -->
 			<div style="padding:10px">Audio Jack:<span id="audioJackContent">unknown</span></div>
 		</div>
@@ -96,13 +105,13 @@
 		<div class="sensor">
 			<p><b>Attitude</b></p>
 			<input type="number" id="attitudeFrequency" value="1">
-			<button onclick="iphone.subscribeAttitude($('#attitudeFrequency').val()-0,function(ip,e){
+			<button onclick="device.subscribeAttitude($('#attitudeFrequency').val()-0,function(ip,e){
 					
 					$('#attitudeContentY').html(e['y']);
 					$('#attitudeContentP').html(e['p']);
 					$('#attitudeContentR').html(e['r']);
 				});">subscribe attitude</button>
-			<button onclick="iphone.releaseAttitude()">unsubscribe attitude</button>
+			<button onclick="device.releaseAttitude()">unsubscribe attitude</button>
 			<!-- ADD CONTENT -->
 			<div style="padding:10px">Attitude<br/>
 			yaw:<span id="attitudeContentY">unknown</span><br/>
@@ -115,11 +124,11 @@
 		<div class="sensor">
 			<p><b>Power Source</b></p>
 			
-			<button onclick="iphone.subscribePowerSource(function(ip,e){
+			<button onclick="device.subscribePowerSource(function(ip,e){
 					$('#powerSourceContent').html(e);
 
 				});">subscribe power source</button>
-			<button onclick="iphone.releasePowerSource();">unsubscribe power source</button>
+			<button onclick="device.releasePowerSource();">unsubscribe power source</button>
 			<!-- ADD CONTENT -->
 			<div style="padding:10px">Power Source:<span id="powerSourceContent">unknown</span></div>
 
@@ -130,11 +139,11 @@
 		<div class="sensor">
 			<p><b>Magnetometer</b></p>
 			<p style="font-size:12px"> Note: it works if you bring a magnet close to your device.</p>
-			<button onclick="iphone.subscribeMagnetometer(function(ip,e,b){
+			<button onclick="device.subscribeMagnetometer(function(ip,e,b){
 					$('#magnetometerContent').html(b);
 
 				});">subscribe Magnetometer</button>
-			<button onclick="iphone.releaseMagnetometer()">unsubscribe magnetometer</button>
+			<button onclick="device.releaseMagnetometer()">unsubscribe magnetometer</button>
 			<!-- ADD CONTENT -->
 			<div style="padding:10px">Power Source:<span id="magnetometerContent">unknown</span></div>
 
