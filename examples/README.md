@@ -1,13 +1,13 @@
 ##Examples are live at:
 
-####[Simple example](https://pierdr.github.io/tramontana/examples/example-basic.html)
+####[Hello World!](https://pierdr.github.io/tramontana/examples/A-example-helloWorld.html)
 
-####[Sensor](https://pierdr.github.io/tramontana/examples/example-sensor.html)
+####[Sensor - Device Orientation](https://pierdr.github.io/tramontana/examples/B-example-subscribeOrientation.html)
 
-####[All sensors](https://pierdr.github.io/tramontana/examples/example-all-sensors.html)
+####[All sensors](https://pierdr.github.io/tramontana/examples/C-example-all-sensors.html)
 
-####[Game](https://pierdr.github.io/tramontana/examples/example-game.html)
+####[tramontana and p5js](https://pierdr.github.io/tramontana/examples/D-example-p5-1.html)
 
-####[Processing](https://pierdr.github.io/tramontana/examples/example-processing.html)
+####[tramontana and p5js #2](https://pierdr.github.io/tramontana/examples/E-example-p5-2.html)
 
-####[Processing 2](https://pierdr.github.io/tramontana/examples/example-processing2.html)
+####[Hardware - tramontana board](https://pierdr.github.io/tramontana/examples/F-example-hardware.html)
