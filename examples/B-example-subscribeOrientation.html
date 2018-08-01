@@ -9,7 +9,7 @@
 		
 	<!-- create a global variable-->
 		<script>
-			var iphone=new tramontana();
+			var device=new tramontana();
 			var orientations=["","Portrait","PortraitUpsideDown","LandscapeLeft","LandscapeRight","FacingUp","FacingDown"];
 			
 		</script>
@@ -17,14 +17,24 @@
 	<body>
 		<!--Link to tramontana the app!-->
 		<div>
-		<h5>To get started download the Tramontana App on your iOS device from <a href="https://itunes.apple.com/us/app/tramontana/id1121069555?mt=8">here</a>.</h5>
+		<h4>To get started download the Tramontana App on your iOS device from <a href="https://itunes.apple.com/us/app/tramontana/id1121069555?mt=8">here</a>.</h4>
 		</div>
+		<p>
+			1. Insert the IP Address.
+		</p>
+		<p>
+			2. Press the button to open the connection and listen to orientation changes.
+		</p>
+		<br>
+		<br>
+		<br>
+		<br>
 		<!-- OPEN SOCKET -->
 		<label>IPAddress</label>
 		<input type="text" id="ipInput" placeholder="192.168.1.1">
 		<!-- Note: check that your phone is not orientation locked.-->
-		<button onclick="iphone.start($('#ipInput').val(),function(e){
-			iphone.subscribeOrientation(function(ip,e){
+		<button onclick="device.start($('#ipInput').val(),function(e){
+			device.subscribeOrientation(function(ip,e){
 				$('#content').html(orientations[e-0]);
 			});
 			})">start and subscribe for orientation changes</button><br/>
